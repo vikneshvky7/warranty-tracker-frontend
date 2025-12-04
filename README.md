@@ -149,10 +149,3 @@ This project is open-source under the **MIT License**.
 Once backend is deployed, **you will have a complete hosted full-stack product** that looks excellent on resumes, LinkedIn, and job portfolios. 🚀
 
 ---
-
-When you’re ready, send me:
-
-✔ Your **frontend Vercel URL**
-✔ Confirm if I should deploy backend on **Render**
-
-I’ll finish the deployment & update README with final URLs.
