@@ -1,151 +1,48 @@
-# 🛍️ Warranty & Purchase Tracker
+# Warranty & Purchase Tracker – Frontend
 
-📌 A smart web app to store and track the warranty status of your purchased items — never forget an expiry date again!
-
----
-
-## 🔗 Live Demo (Frontend)
-
-🌐 Vercel URL → *(Add after deployment)*
-
-Backend URL → *(Add after backend deployment)*
-
----
-
-## 📘 Project Overview
-
-Managing product invoices and warranty expiry dates manually is frustrating — papers get lost, dates are forgotten.
-This app lets users save and view:
-
-✔ Product Name
-✔ Purchase Date
-✔ Warranty Duration
-✔ Store and Invoice Information
-✔ Notes & Additional Details
-
-Along with **automatic expiry alerts** using color indicators:
-
-| Status    | Meaning                   |
-| --------- | ------------------------- |
-| 🟥 Red    | Warranty Expired          |
-| 🟧 Orange | Expiring Soon (≤ 60 days) |
-| 🟩 Green  | Warranty Active           |
-
----
+A simple React-based dashboard to track product purchases and warranty expiry in one place.  
+You can add products, see how many days are left before warranty ends, and quickly edit or delete old entries.
 
 ## ✨ Features
 
-* 🆕 Add new purchased items
-* ✏️ Edit existing entries
-* 🗑️ Delete items anytime
-* 🎯 Auto-calculated warranty expiry
-* 🔔 Visual expiry alerts
-* 🎨 Clean & responsive UI
-* ⚡ Fast REST API Integration
+- Add new products with:
+  - Product name  
+  - Category  
+  - Purchase date  
+  - Warranty in months  
+  - Store name  
+  - Invoice number  
+  - Optional notes
+- Shows **warranty status**:
+  - ✅ Green: more than 60 days left  
+  - 🟧 Orange: less than or equal to 60 days left  
+  - 🔴 Red: already expired
+- Edit and delete items inline
+- Responsive, card-based UI
 
 ---
 
-## 🧩 Tech Stack
+## 🧱 Tech Stack
 
-| Layer      | Technology                                   |
-| ---------- | -------------------------------------------- |
-| Frontend   | React JS, Axios, HTML, CSS                   |
-| Backend    | Spring Boot REST API                         |
-| Database   | H2 (Dev Mode) / MySQL (Future upgrade)       |
-| Deployment | Vercel (Frontend) & Render/Railway (Backend) |
-
----
-
-## 📂 Project Structure
-
-```
-warranty-tracker/
- │
- ├── backend/         # Spring Boot API
- └── frontend/        # React Application (client UI)
-```
+- **React** (Create React App)
+- **JavaScript (ES6+)**
+- **HTML5 / CSS3**
+- **Axios** – for HTTP calls
+- **Deployed on:** Vercel / Render (depending on your setup)
 
 ---
 
-## 📡 API Endpoints
+## 🏗 Project Structure
 
-| Method | Endpoint          | Action                   |
-| ------ | ----------------- | ------------------------ |
-| GET    | `/api/items`      | Fetch all warranty items |
-| POST   | `/api/items`      | Create a new item        |
-| PUT    | `/api/items/{id}` | Update item details      |
-| DELETE | `/api/items/{id}` | Remove an item           |
-
----
-
-## 🖥️ Setup Instructions
-
-### 1️⃣ Start Backend Server
-
-```sh
-cd backend
-./mvnw spring-boot:run
-```
-
-➡ Backend will run at:
-`http://localhost:8080/api/items`
-
----
-
-### 2️⃣ Start Frontend UI
-
-```sh
-cd frontend
-npm install
-npm start
-```
-
-➡ Frontend runs at:
-`http://localhost:3000`
-
----
-
-## 🚀 Deployment Information
-
-| Component        | Service              |
-| ---------------- | -------------------- |
-| Frontend Hosting | Vercel ✔             |
-| Backend Hosting  | Render (Recommended) |
-
-We will set **environment-based API URL**:
-
-```js
-const API_URL = "https://your-backend-url/api/items";
-```
-
----
-
-## 🧭 Future Enhancements
-
-* 📁 Attach digital invoice files (PDF/Images)
-* 🔑 Login & Authentication
-* 📧 Email reminders before expiration
-* 📊 Dashboard analytics
-* 📱 Mobile app version
-
----
-
-## 👨‍💻 Author
-
-**Viknesh Vky**
-📧 [vikneshvky@gmail.com](mailto:vikneshvky@gmail.com)
-🔗 GitHub: [https://github.com/vikneshvky7](https://github.com/vikneshvky7)
-
----
-
-## 📜 License
-
-This project is open-source under the **MIT License**.
-
----
-
-### 🏁 Final Notes
-
-Once backend is deployed, **you will have a complete hosted full-stack product** that looks excellent on resumes, LinkedIn, and job portfolios. 🚀
-
----
+```text
+warranty-tracker-frontend/
+├─ public/
+│  ├─ index.html
+├─ src/
+│  ├─ App.js           # Main UI and logic
+│  ├─ App.css          # Styling for the app
+│  ├─ index.js         # React entry point
+│  ├─ services/
+│  │  └─ api.js        # API client and base URL
+├─ package.json
+└─ README.md
